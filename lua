@@ -1,17 +1,17 @@
 local HttpService = game:GetService("HttpService")
 
-if not isfolder("WisHub") then
-    makefolder("WisHub")
+if not isfolder("NixHub") then
+    makefolder("NixHub")
 end
-if not isfolder("WisHub/Config") then
-    makefolder("WisHub/Config")
+if not isfolder("NixHub/Config") then
+    makefolder("NixHub/Config")
 end
 
 local gameName   = tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 gameName         = gameName:gsub("[^%w_ ]", "")
 gameName         = gameName:gsub("%s+", "_")
 
-local ConfigFile = "WisHub/Config/" .. gameName .. ".json"
+local ConfigFile = "NixHub/Config/" .. gameName .. ".json"
 
 ConfigData       = {}
 Elements         = {}
@@ -263,7 +263,7 @@ end
 local Chloex = {}
 function Chloex:MakeNotify(NotifyConfig)
     local NotifyConfig = NotifyConfig or {}
-    NotifyConfig.Title = NotifyConfig.Title or "WisHub"
+    NotifyConfig.Title = NotifyConfig.Title or "NixHub"
     NotifyConfig.Description = NotifyConfig.Description or "Notification"
     NotifyConfig.Content = NotifyConfig.Content or "Content"
     NotifyConfig.Color = NotifyConfig.Color or Color3.fromRGB(255, 0, 255)
@@ -461,7 +461,7 @@ end
 
 function than(msg, delay, color, title, desc)
     return Chloex:MakeNotify({
-        Title = title or "WisHub",
+        Title = title or "NixHub",
         Description = desc or "Notification",
         Content = msg or "Content",
         Color = color or Color3.fromRGB(0, 208, 255),
@@ -471,7 +471,7 @@ end
 
 function Chloex:Window(GuiConfig)
     GuiConfig              = GuiConfig or {}
-    GuiConfig.Title        = GuiConfig.Title or "WisHub"
+    GuiConfig.Title        = GuiConfig.Title or "NixHub"
     GuiConfig.Footer       = GuiConfig.Footer or ""
     GuiConfig.Color        = GuiConfig.Color or Color3.fromRGB(255, 0, 255)
     GuiConfig["Tab Width"] = GuiConfig["Tab Width"] or 120
@@ -482,7 +482,7 @@ function Chloex:Window(GuiConfig)
 
     local GuiFunc = {}
 
-    local NatUI = Instance.new("ScreenGui");
+    local NixUI = Instance.new("ScreenGui");
     local DropShadowHolder = Instance.new("Frame");
     local DropShadow = Instance.new("ImageLabel");
     local Main = Instance.new("Frame");
@@ -505,10 +505,10 @@ function Chloex:Window(GuiConfig)
     local LayersFolder = Instance.new("Folder");
     local LayersPageLayout = Instance.new("UIPageLayout");
 
-    NatUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    NatUI.Name = "NatUI"
-    NatUI.ResetOnSpawn = false
-    NatUI.Parent = game:GetService("CoreGui")
+    NixUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    NixUI.Name = "NixUI"
+    NixUI.ResetOnSpawn = false
+    NixUI.Parent = game:GetService("CoreGui")
 
     DropShadowHolder.BackgroundTransparency = 1
     DropShadowHolder.BorderSizePixel = 0
@@ -523,8 +523,8 @@ function Chloex:Window(GuiConfig)
     DropShadowHolder.Name = "DropShadowHolder"
     DropShadowHolder.Parent = NatUI
 
-    DropShadowHolder.Position = UDim2.new(0, (NatUI.AbsoluteSize.X // 2 - DropShadowHolder.Size.X.Offset // 2), 0,
-        (NatUI.AbsoluteSize.Y // 2 - DropShadowHolder.Size.Y.Offset // 2))
+    DropShadowHolder.Position = UDim2.new(0, (NixUI.AbsoluteSize.X // 2 - DropShadowHolder.Size.X.Offset // 2), 0,
+        (NixUI.AbsoluteSize.Y // 2 - DropShadowHolder.Size.Y.Offset // 2))
     DropShadow.Image = "rbxassetid://6015897843"
     DropShadow.ImageColor3 = Color3.fromRGB(15, 15, 15)
     DropShadow.ImageTransparency = 1
@@ -747,8 +747,8 @@ function Chloex:Window(GuiConfig)
     ScrollTab.ChildRemoved:Connect(UpdateSize1)
 
     function GuiFunc:DestroyGui()
-        if CoreGui:FindFirstChild("NatUI") then
-            NatUI:Destroy()
+        if CoreGui:FindFirstChild("NixUI") then
+            NixUI:Destroy()
         end
     end
 
@@ -805,7 +805,7 @@ function Chloex:Window(GuiConfig)
         Title.Position = UDim2.new(0, 0, 0, 4)
         Title.BackgroundTransparency = 1
         Title.Font = Enum.Font.GothamBold
-        Title.Text = "WisHub Window"
+        Title.Text = "NixHub Window"
         Title.TextSize = 22
         Title.TextColor3 = Color3.fromRGB(255, 255, 255)
         Title.ZIndex = 52
@@ -854,7 +854,7 @@ function Chloex:Window(GuiConfig)
         Instance.new("UICorner", Cancel).CornerRadius = UDim.new(0, 6)
 
         Yes.MouseButton1Click:Connect(function()
-            if NatUI then NatUI:Destroy() end
+            if NixUI then NixUI:Destroy() end
             if game.CoreGui:FindFirstChild("ToggleUIButton") then
                 game.CoreGui.ToggleUIButton:Destroy()
             end
