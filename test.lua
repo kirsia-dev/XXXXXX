@@ -2115,7 +2115,7 @@ function Chloex:MakeNotify(NotifyConfig)
     return NotifyFunction
 end
 
-function than(msg, delay, color, title, desc)
+function Nix(msg, delay, color, title, desc)
     return Chloex:MakeNotify({
         Title = title or "NixHub",
         Description = desc or "Notification",
