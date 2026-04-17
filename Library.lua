@@ -1307,6 +1307,7 @@ local Icons = {
 	["ribbon"] = "rbxassetid://94265331526851",
 	["rocket"] = "rbxassetid://87412317685854",
 	["rocking-chair"] = "rbxassetid://110420269495360",
+	["rod"] = "rbxassetid://97167558235554",
 	["roller-coaster"] = "rbxassetid://112426178972099",
 	["rose"] = "rbxassetid://126336840238769",
 	["rotate-3d"] = "rbxassetid://76300551576392",
