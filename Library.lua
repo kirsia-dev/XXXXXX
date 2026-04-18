@@ -2178,7 +2178,7 @@ function Chloex:Window(GuiConfig)
     end
     DropShadowHolder.ZIndex = 0
     DropShadowHolder.Name = "DropShadowHolder"
-    DropShadowHolder.Parent = NixUI -- Diperbaiki: Sebelumnya "NatUI"
+    DropShadowHolder.Parent = NixUI
 
     DropShadowHolder.Position = UDim2.new(0, (NixUI.AbsoluteSize.X // 2 - DropShadowHolder.Size.X.Offset // 2), 0,
         (NixUI.AbsoluteSize.Y // 2 - DropShadowHolder.Size.Y.Offset // 2))
@@ -2765,7 +2765,7 @@ function Chloex:Window(GuiConfig)
         TabButton.Parent = Tab
 
         TabName.Font = Enum.Font.GothamBold
-        TabName.Text = "[ " .. tostring(TabConfig.Name) .. " ]"
+        TabName.Text = "〢 "
         TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabName.TextSize = 13
         TabName.TextXAlignment = Enum.TextXAlignment.Left
