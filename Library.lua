@@ -2765,7 +2765,7 @@ function Chloex:Window(GuiConfig)
         TabButton.Parent = Tab
 
         TabName.Font = Enum.Font.GothamBold
-        TabName.Text = "〢 "
+        TabName.Text = "〢 " .. tostring(TabConfig.Name)
         TabName.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabName.TextSize = 13
         TabName.TextXAlignment = Enum.TextXAlignment.Left
@@ -3761,7 +3761,6 @@ function Chloex:Window(GuiConfig)
                         { Size = UDim2.fromScale((Value - SliderConfig.Min) / (SliderConfig.Max - SliderConfig.Min), 1) }
                     ):Play()
 
-                    -- ✅ Panggil callback dengan aman
                     if type(SliderConfig.Callback) == "function" then
                         local ok, err = pcall(SliderConfig.Callback, Value)
                         if not ok then warn("Slider Callback error:", err) end
@@ -3945,8 +3944,7 @@ function Chloex:Window(GuiConfig)
                 function InputFunc:Set(Value)
                     InputTextBox.Text = Value
                     InputFunc.Value = Value
-                    
-                    -- ✅ Panggil callback dengan aman
+
                     if type(InputConfig.Callback) == "function" then
                         local ok, err = pcall(InputConfig.Callback, Value)
                         if not ok then warn("Input Callback error:", err) end
@@ -4256,7 +4254,6 @@ function Chloex:Window(GuiConfig)
                         and (DropdownConfig.Multi and "Select Options" or "Select Option")
                         or table.concat(texts, ", ")
 
-                    -- ✅ Panggil callback dengan aman
                     if type(DropdownConfig.Callback) == "function" then
                         local ok, err
                         if DropdownConfig.Multi then
