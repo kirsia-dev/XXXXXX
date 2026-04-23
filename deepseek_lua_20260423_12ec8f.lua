@@ -2073,7 +2073,7 @@ function Chloex:MakeNotify(NotifyConfig)
     return NotifyFunction
 end
 
-function chloex(msg, delay, color, title, desc)
+function Nex(msg, delay, color, title, desc)
     return Chloex:MakeNotify({
         Title = title or "NexHub",
         Description = desc or "Notification",
