@@ -2073,7 +2073,7 @@ function Chloex:MakeNotify(NotifyConfig)
     return NotifyFunction
 end
 
-function chloex(msg, delay, color, title, desc)
+function Nex(msg, delay, color, title, desc)
     return Chloex:MakeNotify({
         Title = title or "NexHub",
         Description = desc or "Notification",
@@ -2175,9 +2175,8 @@ function Chloex:Window(GuiConfig)
 
     UICorner.Parent = Main
 
-    -- Tambahkan border ungu pada frame utama (Main)
     local MainBorder = Instance.new("UIStroke")
-    MainBorder.Color = Color3.fromRGB(71, 49, 124) -- #47317C
+    MainBorder.Color = Color3.fromRGB(71, 49, 124)
     MainBorder.Thickness = 2
     MainBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     MainBorder.Parent = Main
@@ -2232,7 +2231,6 @@ function Chloex:Window(GuiConfig)
     Close.Name = "Close"
     Close.Parent = Top
 
-    -- Tambahkan border ungu pada tombol Close (opsional, sebagai aksen)
     local CloseBorder = Instance.new("UIStroke")
     CloseBorder.Color = Color3.fromRGB(71, 49, 124)
     CloseBorder.Thickness = 1.5
@@ -2405,7 +2403,6 @@ function Chloex:Window(GuiConfig)
         local UICorner = Instance.new("UICorner", Dialog)
         UICorner.CornerRadius = UDim.new(0, 8)
 
-        -- Border ungu pada dialog
         local DialogBorder = Instance.new("UIStroke")
         DialogBorder.Color = Color3.fromRGB(71, 49, 124)
         DialogBorder.Thickness = 2
@@ -2472,7 +2469,7 @@ function Chloex:Window(GuiConfig)
         Yes.Name = "Yes"
         Yes.Parent = Dialog
         Instance.new("UICorner", Yes).CornerRadius = UDim.new(0, 6)
-        -- Border ungu pada tombol Yes
+
         local YesBorder = Instance.new("UIStroke")
         YesBorder.Color = Color3.fromRGB(71, 49, 124)
         YesBorder.Thickness = 1.5
@@ -2493,7 +2490,7 @@ function Chloex:Window(GuiConfig)
         Cancel.Name = "Cancel"
         Cancel.Parent = Dialog
         Instance.new("UICorner", Cancel).CornerRadius = UDim.new(0, 6)
-        -- Border ungu pada tombol Cancel
+
         local CancelBorder = Instance.new("UIStroke")
         CancelBorder.Color = Color3.fromRGB(71, 49, 124)
         CancelBorder.Thickness = 1.5
