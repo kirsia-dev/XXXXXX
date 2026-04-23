@@ -2231,12 +2231,6 @@ function Chloex:Window(GuiConfig)
     Close.Name = "Close"
     Close.Parent = Top
 
-    local CloseBorder = Instance.new("UIStroke")
-    CloseBorder.Color = Color3.fromRGB(71, 49, 124)
-    CloseBorder.Thickness = 1.5
-    CloseBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    CloseBorder.Parent = Close
-
     ImageLabel1.Image = "rbxassetid://9886659671"
     ImageLabel1.AnchorPoint = Vector2.new(0.5, 0.5)
     ImageLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
